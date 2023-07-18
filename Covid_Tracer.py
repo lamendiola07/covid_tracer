@@ -53,7 +53,7 @@ permanent_address_prsnl = Label(covid_prompt, text = "Permanent Address:")
 permanent_address_prsnl.place(x = 220, y = 180)
 
 permanent_address_prsnl_input = Text(covid_prompt, width = "23", height = "10")
-permanent_address_prsnl_input.place(x = 220, y = 200)
+permanent_address_prsnl_input.place(x = 220, y = 200).
 
 # - Birthdate:
 # - Contact Number/Landline:
