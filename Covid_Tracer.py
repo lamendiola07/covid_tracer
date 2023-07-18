@@ -24,7 +24,37 @@ pre_form_message.place(x = 10, y = 20)
 
 #Form for Asking Personal Questions:
 # Name: (First Name, Middle Name, Last Name)
+first_name_prsnl = Label(covid_prompt, text = "First Name:")
+first_name_prsnl.place(x = 10, y = 60)
+
+first_name_prsnl_input = Entry(covid_prompt, width = "30")
+first_name_prsnl_input.place(x = 10, y = 80)
+
+middle_name_prsnl = Label(covid_prompt, text = "Middle Name:")
+middle_name_prsnl.place(x = 220, y = 60)
+
+middle_name_prsnl_input = Entry(covid_prompt, width = "30")
+middle_name_prsnl_input.place(x = 220, y = 80)
+
+last_name_prsnl = Label(covid_prompt, text = "Last Name:")
+last_name_prsnl.place(x = 10, y = 110)
+
+last_name_prsnl_input = Entry(covid_prompt, width = "30")
+last_name_prsnl_input.place(x = 10, y = 130)
+
 # - Address: (Current & Permanent)
+current_address_prsnl = Label(covid_prompt, text = "Current Address:")
+current_address_prsnl.place(x = 10, y = 180)
+
+current_address_prsnl_input = Text(covid_prompt, width = "23", height = "10")
+current_address_prsnl_input.place(x = 10, y = 200)
+
+permanent_address_prsnl = Label(covid_prompt, text = "Permanent Address:")
+permanent_address_prsnl.place(x = 220, y = 180)
+
+permanent_address_prsnl_input = Text(covid_prompt, width = "23", height = "10")
+permanent_address_prsnl_input.place(x = 220, y = 200)
+
 # - Birthdate:
 # - Contact Number/Landline:
 # - Email Address:
