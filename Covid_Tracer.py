@@ -71,8 +71,12 @@ contact_prsnl_input = Entry(covid_prompt, width = "30")
 contact_prsnl_input.place(x = 10, y = 650)
 
 # - Email Address:
-# - Civil Status:
-# - Religion:
+email_prsnl = Label(covid_prompt, text = "E-mail Address:")
+email_prsnl.place(x = 10, y = 680)
+
+email_prsnl_input = Entry(covid_prompt, width = "30")
+email_prsnl_input.place(x = 10, y = 700)
+
 # - Occupation:
 # - Workplace Name/ School or University Name:
 # - Workplace Address / School or University Address
