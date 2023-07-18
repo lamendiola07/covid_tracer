@@ -16,7 +16,6 @@ covid_prompt = Tk()
 covid_prompt.title("(CCT) Covid Contact Tracer - BetaTest v.0.0")
 covid_prompt.geometry("500x500")
 
-
 #Pre-Form Message
 pre_form_message = Label(covid_prompt, text ="Fill out the form with outmost honesty for safety measures and the well being of others.\nMaraming Salamat Po!")
 pre_form_message.place(x = 10, y = 20)
@@ -53,9 +52,16 @@ permanent_address_prsnl = Label(covid_prompt, text = "Permanent Address:")
 permanent_address_prsnl.place(x = 220, y = 180)
 
 permanent_address_prsnl_input = Text(covid_prompt, width = "23", height = "10")
-permanent_address_prsnl_input.place(x = 220, y = 200).
+permanent_address_prsnl_input.place(x = 220, y = 200)
 
 # - Birthdate:
+birth_date = Label(covid_prompt, text ="Birth Date:")
+birth_date.place(x = 10, y = 400)
+
+from tkcalendar import Calendar
+calendar = Calendar(covid_prompt, selectmode = 'day', year = 2023, month = 7, day = 18)
+calendar.place(x = 10, y = 430)
+
 # - Contact Number/Landline:
 # - Email Address:
 # - Civil Status:
@@ -90,8 +96,6 @@ permanent_address_prsnl_input.place(x = 220, y = 200).
 # If Yes, End Program
 # If Not, should be able to edit given data again
 
-# Last MEssage: Picture or Slogan Quote of Covid Safety Measures
-
-
+# Last Message: Picture or Slogan Quote of Covid Safety Measures
 
 covid_prompt.mainloop()
