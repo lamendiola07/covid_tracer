@@ -12,10 +12,11 @@
 
 #Main Window
 from tkinter import *
+import tkinter as tk
 
-covid_prompt = Tk()
+covid_prompt = tk.Tk()
 covid_prompt.title("(CCT) Covid Contact Tracer - BetaTest v.0.0")
-covid_prompt.geometry("1000x1000")
+covid_prompt.geometry("1530x1530")
 
 #Pre-Form Message
 pre_form_message = Label(covid_prompt, text ="Fill out the form with outmost honesty for safety measures and the well being of others.\nMaraming Salamat Po!")
@@ -92,13 +93,50 @@ workplace_name_input = Entry(covid_prompt, width= "30")
 workplace_name_input.place(x = 220, y = 650)
 
 # - Workplace Address / School or University Address
+workplace_add = Label(covid_prompt, text = "Workplace Address / School Address:")
+workplace_add.place(x = 220, y= 680)
+
+workplace_add_input = Entry(covid_prompt, width = "30")
+workplace_add_input.place (x = 220, y = 700)
+
+#Line Design to divide the main window
 
 #Emergency Contact:
 # -Name (First Name, Last Name)
+name_emrgncy = Label(covid_prompt, text = "Name (First Name, Last Name):")
+name_emrgncy.place(x = 600, y = 20)
+
+name_emrgncy_input = Entry(covid_prompt, width ="30")
+name_emrgncy_input.place(x = 600, y = 40)
+
 # -Address:
+address_emergncy = Label(covid_prompt, text = "Address:")
+address_emergncy.place(x = 820, y= 20)
+
+address_emergncy_input = Entry(covid_prompt, width ="30")
+address_emergncy_input.place(x = 820, y = 40)
+
 # -Contact Number/Landline
+contact_emergncy = Label(covid_prompt, text = "Contact Number / Landline:")
+contact_emergncy.place(x = 600, y = 80)
+
+contact_emergncy_input = Entry(covid_prompt, width = "30")
+contact_emergncy_input.place(x = 600, y = 100)
+
 # -Email Address
+email_emergncy = Label(covid_prompt, text ="E-mail Address:")
+email_emergncy.place(x = 820, y = 80)
+
+email_emergncy_input = Entry(covid_prompt, width ="30")
+email_emergncy_input.place(x = 820, y = 100)
+
 # -Relationship to the Contact Person
+relationship_emergncy = Label(covid_prompt, text = "Relationship to the Contact Person:")
+relationship_emergncy.place(x = 600, y = 130)
+
+relationship_emergncy_input = Entry(covid_prompt, width="30")
+relationship_emergncy_input.place(x =600, y = 150)
+
 
 #Questions to Assure Covid Symptoms of User:
 # - Have you been vaccinated for COVID-19?
@@ -107,6 +145,7 @@ workplace_name_input.place(x = 220, y = 650)
 # - Have you had exposure to probable or confirm case in the last 7 days?
 # - Had contact with others with COVID Symptoms?
 # - Have you been tested for COVID-19 in the last 14 days?
+
 
 #Additional Questions:
 # - Most recent visited place
