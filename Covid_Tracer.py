@@ -10,7 +10,14 @@
 
 ####### LAYOUT DRAFT FOR PROGRAM ######
 
-#Main Window Title: (CCT) Covid Contact Tracer - BetaTest v.0.0
+#Main Window
+from tkinter import *
+covid_prompt = Tk()
+covid_prompt.title("(CCT) Covid Contact Tracer - BetaTest v.0.0")
+covid_prompt.geometry("500x500")
+covid_prompt.mainloop()
+
+
 #Message before Form: "Fill out the form with outmost honesty for safety measures and well being of others. Maraming Salamat Po!"
 
 #Form for Asking Personal Questions:
