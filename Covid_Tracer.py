@@ -139,12 +139,123 @@ relationship_emergncy_input.place(x =600, y = 150)
 
 
 #Questions to Assure Covid Symptoms of User:
+covid_symptom = Label(covid_prompt, text = "Assessment for Signs and Symptoms of Covid-19")
+covid_symptom.place(x = 600, y = 200)
+
 # - Have you been vaccinated for COVID-19?
+covid_symptom_one = Label(covid_prompt, text = "Have you been vaccinated for COVID-19?")
+covid_symptom_one.place(x = 600, y = 240)
+
+symptom_one = IntVar()
+covid_symptom_one_rbtn1 = Radiobutton(covid_prompt, text = "Yes", variable = symptom_one, value = "1")
+covid_symptom_one_rbtn1.place(x = 600, y = 260)
+
+covid_symptom_one_rbtn2 = Radiobutton(covid_prompt, text = "No", variable = symptom_one, value = "2")
+covid_symptom_one_rbtn2.place(x = 600, y = 280)
+
+# What is your current number of vaccination shot?
+covid_symptom_two = Label(covid_prompt, text = "What is your current dose/booster of vaccination shot?")
+covid_symptom_two.place(x = 600, y = 320)
+
+symptom_two = IntVar()
+covid_symptom_two_rbtn1 = Radiobutton(covid_prompt, text = "1st Dose", variable = symptom_two, value = "1")
+covid_symptom_two_rbtn1.place(x = 600, y = 340)
+
+covid_symptom_two_rbtn2 = Radiobutton(covid_prompt, text = "2nd Dose", variable = symptom_two, value = "2")
+covid_symptom_two_rbtn2.place(x = 600, y = 360)
+
+covid_symptom_two_rbtn3 = Radiobutton(covid_prompt, text = "1st Booster", variable = symptom_two, value = "3")
+covid_symptom_two_rbtn3.place(x = 600, y = 380)
+
+covid_symptom_two_rbtn4 = Radiobutton(covid_prompt, text = "2nd Booster", variable = symptom_two, value = "4")
+covid_symptom_two_rbtn4.place(x = 600, y = 400)
+
+covid_symptom_two_rbtn5 = Radiobutton(covid_prompt, text = "N/A", variable = symptom_two, value = "5")
+covid_symptom_two_rbtn5.place(x = 600, y = 420)
+
+
 # - What is the brand of your COVID-19 Vaccination
+covid_symptom_three = Label(covid_prompt, text = "What is the brand of your vaccination for COVID-19?")
+covid_symptom_three.place(x = 600, y = 460)
+
+covid_symptom_three_input = Entry(covid_prompt, width = "30")
+covid_symptom_three_input.place(x = 600, y = 480)
+
 # - Are you experiencing symptoms in the past 7 days
+covid_symptom_four = Label(covid_prompt, text = "Are you experiencing these symptoms in the past 7 days?")
+covid_symptom_four.place(x = 600, y = 510)
+
+symptom_four_chk1 = Checkbutton(covid_prompt, text = "Fever")
+symptom_four_chk1.place(x = 600, y = 530)
+
+symptom_four_chk2 = Checkbutton(covid_prompt, text = "Cough")
+symptom_four_chk2.place(x = 600, y = 550)
+
+symptom_four_chk3 = Checkbutton(covid_prompt, text = "Colds")
+symptom_four_chk3.place(x = 600, y = 570)
+
+symptom_four_chk4 = Checkbutton(covid_prompt, text = "Muscle/body pains")
+symptom_four_chk4.place(x = 600, y = 590)
+
+symptom_four_chk5 = Checkbutton(covid_prompt, text = "Sore Throat")
+symptom_four_chk5.place(x = 600, y = 610)
+
+symptom_four_chk6 = Checkbutton(covid_prompt, text = "Diarrhea")
+symptom_four_chk6.place(x = 600, y = 630)
+
+symptom_four_chk7 = Checkbutton(covid_prompt, text = "None of the above")
+symptom_four_chk7.place(x = 600, y = 650)
+
+symptom_four_chk8 = Checkbutton(covid_prompt, text = "Headache")
+symptom_four_chk8.place(x = 820, y = 530)
+
+symptom_four_chk9 = Checkbutton(covid_prompt, text = "Shortness of breath")
+symptom_four_chk9.place(x = 820, y = 550)
+
+symptom_four_chk10 = Checkbutton(covid_prompt, text = "Difficulty of breathing")
+symptom_four_chk10.place(x = 820, y = 570)
+
+symptom_four_chk11 = Checkbutton(covid_prompt, text = "Loss of taste")
+symptom_four_chk11.place(x = 820, y = 590)
+
+symptom_four_chk12 = Checkbutton(covid_prompt, text = "Loss of smell")
+symptom_four_chk12.place(x = 820, y = 610)
+
 # - Have you had exposure to probable or confirm case in the last 7 days?
+covid_symptom_five = Label(covid_prompt, text = "Have you had exposure to probable or confirm case in the last 7 days?") 
+covid_symptom_five.place(x = 600, y = 680)
+
+symptom_five = IntVar()
+covid_symptom_five_rbtn1 = Radiobutton(covid_prompt, text = "Yes", variable = symptom_five, value = "1")
+covid_symptom_five_rbtn1.place(x = 600, y = 700)
+
+covid_symptom_five_rbtn2 = Radiobutton(covid_prompt, text = "No", variable = symptom_five, value = "2")
+covid_symptom_five_rbtn2.place(x = 600, y = 720)
+
 # - Had contact with others with COVID Symptoms?
+covid_symptom_six = Label(covid_prompt, text = "Have you had contact with others with COVID-19 Symptoms in the last 7 days?")
+covid_symptom_six.place(x = 1100, y = 20)
+
+symptom_six = IntVar()
+covid_symptom_six_rbtn1 = Radiobutton(covid_prompt, text = "Yes", variable = symptom_six, value = "1")
+covid_symptom_six_rbtn1.place(x = 1100, y = 40)
+
+covid_symptom_six_rbtn2 = Radiobutton(covid_prompt, text = "No", variable = symptom_six, value = "2")
+covid_symptom_six_rbtn2.place(x = 1100, y = 60)
+
 # - Have you been tested for COVID-19 in the last 14 days?
+covid_symptom_seven = Label(covid_prompt, text = "Have you been tested for COVID-19 in the last 14 days?") 
+covid_symptom_seven.place(x = 1100, y = 100)
+
+symptom_seven = IntVar()
+covid_symptom_seven_rbtn1 = Radiobutton(covid_prompt, text = "Yes (Positive)", variable = symptom_seven, value = "1")
+covid_symptom_seven_rbtn1.place(x = 1100, y = 120)
+
+covid_symptom_seven_rbtn2 = Radiobutton(covid_prompt, text = "Yes (Negative)", variable = symptom_seven, value = "2")
+covid_symptom_seven_rbtn2.place(x = 1100, y = 140)
+
+covid_symptom_seven_rbtn3 = Radiobutton(covid_prompt, text = "No", variable = symptom_seven, value = "2")
+covid_symptom_seven_rbtn3.place(x = 1100, y = 160)
 
 
 #Additional Questions:
