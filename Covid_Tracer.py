@@ -15,13 +15,15 @@ from tkinter import *
 covid_prompt = Tk()
 covid_prompt.title("(CCT) Covid Contact Tracer - BetaTest v.0.0")
 covid_prompt.geometry("500x500")
-covid_prompt.mainloop()
 
 
-#Message before Form: "Fill out the form with outmost honesty for safety measures and well being of others. Maraming Salamat Po!"
+#Pre-Form Message
+pre_form_message = Label(covid_prompt, text ="Fill out the form with outmost honesty for safety measures and the well being of others.\nMaraming Salamat Po!")
+pre_form_message.place(x = 10, y = 20)
+
 
 #Form for Asking Personal Questions:
-# - Name: (First Name, Middle Name, Last Name)
+# Name: (First Name, Middle Name, Last Name)
 # - Address: (Current & Permanent)
 # - Birthdate:
 # - Contact Number/Landline:
@@ -62,3 +64,4 @@ covid_prompt.mainloop()
 
 
 
+covid_prompt.mainloop()
