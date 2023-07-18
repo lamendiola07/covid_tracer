@@ -12,9 +12,10 @@
 
 #Main Window
 from tkinter import *
+
 covid_prompt = Tk()
 covid_prompt.title("(CCT) Covid Contact Tracer - BetaTest v.0.0")
-covid_prompt.geometry("500x500")
+covid_prompt.geometry("1000x1000")
 
 #Pre-Form Message
 pre_form_message = Label(covid_prompt, text ="Fill out the form with outmost honesty for safety measures and the well being of others.\nMaraming Salamat Po!")
@@ -63,6 +64,12 @@ calendar = Calendar(covid_prompt, selectmode = 'day', year = 2023, month = 7, da
 calendar.place(x = 10, y = 430)
 
 # - Contact Number/Landline:
+contact_prsnl = Label(covid_prompt, text = "Contact Number / Landline:")
+contact_prsnl.place(x = 10, y = 630)
+
+contact_prsnl_input = Entry(covid_prompt, width = "30")
+contact_prsnl_input.place(x = 10, y = 650)
+
 # - Email Address:
 # - Civil Status:
 # - Religion:
