@@ -78,6 +78,12 @@ email_prsnl_input = Entry(covid_prompt, width = "30")
 email_prsnl_input.place(x = 10, y = 700)
 
 # - Occupation:
+occupy_prsnl = Label(covid_prompt, text = "Occupation:")
+occupy_prsnl.place(x = 10, y = 730)
+
+occupy_prsnl_input = Entry(covid_prompt, width = "30")
+occupy_prsnl_input.place(x = 10, y = 750)
+
 # - Workplace Name/ School or University Name:
 # - Workplace Address / School or University Address
 
