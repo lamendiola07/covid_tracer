@@ -85,6 +85,12 @@ occupy_prsnl_input = Entry(covid_prompt, width = "30")
 occupy_prsnl_input.place(x = 10, y = 750)
 
 # - Workplace Name/ School or University Name:
+workplace_name = Label(covid_prompt, text = "Workplace Name / School Name:")
+workplace_name.place(x = 220, y = 630)
+
+workplace_name_input = Entry(covid_prompt, width= "30")
+workplace_name_input.place(x = 220, y = 650)
+
 # - Workplace Address / School or University Address
 
 #Emergency Contact:
