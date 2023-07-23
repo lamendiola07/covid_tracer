@@ -295,10 +295,10 @@ addtnl_four_input = Entry(covid_prompt, width = "30")
 addtnl_four_input.place(x = 1100, y = 440)
 
 
-
-
-
 # Submit Button:
+submission_button = Button(covid_prompt, text ="Submit", width = "10")
+submission_button.place(x = 1100, y = 500)
+
 # Should ask user to confirm if the inputs are correct or not (Yes or No, Continue Editing)
 # If Yes, End Program
 # If Not, should be able to edit given data again
