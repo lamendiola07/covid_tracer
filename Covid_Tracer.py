@@ -259,15 +259,50 @@ covid_symptom_seven_rbtn3.place(x = 1100, y = 160)
 
 
 #Additional Questions:
+addtnl_question = Label(covid_prompt, text="Additional Questions")
+addtnl_question.place(x= 1100 , y = 210 )
+
 # - Most recent visited place
+addtnl_one = Label(covid_prompt, text= "Most recent visited area/place?")
+addtnl_one.place(x= 1100 , y = 230 )
+
+addtnl_one_input = Entry(covid_prompt, width="30")
+addtnl_one_input.place(x = 1100, y = 260)
+
 # - Number of people you saw in the area
+addtnl_two = Label(covid_prompt, text="Number of people you saw in the visited area/place?")
+addtnl_two.place(x = 1100 , y = 290)
+
+addtnl_two_input = Entry(covid_prompt, width="30")
+addtnl_two_input.place(x = 1100, y = 310)
+
 # - Mode of Transportation
+addtnl_three = Label(covid_prompt, text="Mode of Transportation?")
+addtnl_three.place(x = 1100, y = 340)
+
+additional_three_qstn = IntVar()
+addtnl_three_input  = Radiobutton(covid_prompt, text = "Public Transportation", variable = additional_three_qstn, value = "1")
+addtnl_three_input.place(x = 1100, y = 360)
+
+addtnl_three_input  = Radiobutton(covid_prompt, text = "Private Transportation", variable = additional_three_qstn, value = "2")
+addtnl_three_input.place(x = 1100, y = 380)
+
 # - Recent Medication Intake/Vitamin Intake
+addtnl_four = Label(covid_prompt, text = "Recent Medication Intake / Vitamin Intake?")
+addtnl_four.place(x = 1100, y = 420)
+
+addtnl_four_input = Entry(covid_prompt, width = "30")
+addtnl_four_input.place(x = 1100, y = 440)
+
+
+
+
 
 # Submit Button:
-# Should ask user to confirm if the inputs are correct or not (Yes or No,Continue Editing)
+# Should ask user to confirm if the inputs are correct or not (Yes or No, Continue Editing)
 # If Yes, End Program
 # If Not, should be able to edit given data again
+
 
 # Last Message: Picture or Slogan Quote of Covid Safety Measures
 
