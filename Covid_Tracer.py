@@ -75,7 +75,7 @@ def submit_records():
     # If Yes, End Program
     # If Not, should be able to edit given data again
     response = messagebox.askyesno("Data Collection Complete!", "Do you want to save the data?")
-    
+
     if response:
         covid_prompt.destroy()
 
@@ -86,7 +86,7 @@ covid_prompt.geometry("1530x1530")
 
 #Entry widget for the main window
 covid_contact_recorder = tk.Entry(covid_prompt)
-covid_contact_recorder.pack()
+
 
 #Pre-Form Message
 pre_form_message = Label(covid_prompt, text ="Fill out the form with outmost honesty for safety measures and the well being of others.\nMaraming Salamat Po!")
@@ -172,40 +172,44 @@ workplace_add_input.place (x = 220, y = 700)
 #Line Design to divide the main window
 
 #Emergency Contact:
+emergency_contact = Label(covid_prompt, text = "Emergency Contact")
+emergency_contact.place(x = 600, y = 10)
+
+
 # -Name (First Name, Last Name)
 name_emrgncy = Label(covid_prompt, text = "Name (First Name, Last Name):")
-name_emrgncy.place(x = 600, y = 20)
+name_emrgncy.place(x = 600, y = 30)
 
 name_emrgncy_input = Entry(covid_prompt, width ="30")
-name_emrgncy_input.place(x = 600, y = 40)
+name_emrgncy_input.place(x = 600, y = 50)
 
 # -Address:
 address_emergncy = Label(covid_prompt, text = "Address:")
-address_emergncy.place(x = 820, y= 20)
+address_emergncy.place(x = 820, y= 30)
 
 address_emergncy_input = Entry(covid_prompt, width ="30")
-address_emergncy_input.place(x = 820, y = 40)
+address_emergncy_input.place(x = 820, y = 50)
 
 # -Contact Number/Landline
 contact_emergncy = Label(covid_prompt, text = "Contact Number / Landline:")
-contact_emergncy.place(x = 600, y = 80)
+contact_emergncy.place(x = 600, y = 90)
 
 contact_emergncy_input = Entry(covid_prompt, width = "30")
-contact_emergncy_input.place(x = 600, y = 100)
+contact_emergncy_input.place(x = 600, y = 110)
 
 # -Email Address
 email_emergncy = Label(covid_prompt, text ="E-mail Address:")
-email_emergncy.place(x = 820, y = 80)
+email_emergncy.place(x = 820, y = 90)
 
 email_emergncy_input = Entry(covid_prompt, width ="30")
-email_emergncy_input.place(x = 820, y = 100)
-
+email_emergncy_input.place(x = 820, y = 110)
+7
 # -Relationship to the Contact Person
 relationship_emergncy = Label(covid_prompt, text = "Relationship to the Contact Person:")
-relationship_emergncy.place(x = 600, y = 130)
+relationship_emergncy.place(x = 600, y = 150)
 
 relationship_emergncy_input = Entry(covid_prompt, width="30")
-relationship_emergncy_input.place(x =600, y = 150)
+relationship_emergncy_input.place(x =600, y = 180)
 
 
 #Questions to Assure Covid Symptoms of User:
@@ -336,7 +340,7 @@ covid_symptom_seven_rbtn1.place(x = 1100, y = 120)
 covid_symptom_seven_rbtn2 = Radiobutton(covid_prompt, text = "Yes (Negative)", variable = symptom_seven, value = "2")
 covid_symptom_seven_rbtn2.place(x = 1100, y = 140)
 
-covid_symptom_seven_rbtn3 = Radiobutton(covid_prompt, text = "No", variable = symptom_seven, value = "2")
+covid_symptom_seven_rbtn3 = Radiobutton(covid_prompt, text = "No", variable = symptom_seven, value = "3")
 covid_symptom_seven_rbtn3.place(x = 1100, y = 160)
 
 
@@ -382,5 +386,13 @@ submission_button = Button(covid_prompt, text ="Submit", width = "10", command =
 submission_button.place(x = 1100, y = 500)
 
 # Last Message: Picture or Slogan Quote of Covid Safety Measures
+from PIL import Image, ImageTk
+
+img_message = "covid_poster.jpg"
+image = Image.open(img_message)
+img = ImageTk.PhotoImage(image)
+
+img_message_input = Label(covid_prompt, image=img, width = "500", height= "400")
+img_message_input.place(x=1100, y=550)
 
 covid_prompt.mainloop()
