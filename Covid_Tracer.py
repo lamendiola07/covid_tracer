@@ -14,9 +14,79 @@
 from tkinter import *
 import tkinter as tk
 
+from tkinter import messagebox
+
+#Call another file to overwrite and save data entry
+def covid_prompt_info(info):
+    with open("covid_contact_entry.txt", "a") as entry_file:
+        for key, value in info.items():
+            entry_file.write(f"{key}: {value}\n")
+        entry_file.write(str(info) + "\n")
+
+#Record of input entries from users
+def submit_records():
+    symptom_four_values = {
+        "Fever": symptom_four_chk1_var.get(),
+        "Cough": symptom_four_chk2_var.get(),
+        "Colds": symptom_four_chk3_var.get(),
+        "Muscle/body pains": symptom_four_chk4_var.get(),
+        "Sore Throat": symptom_four_chk5_var.get(),
+        "Diarrhea": symptom_four_chk6_var.get(),
+        "None of the above": symptom_four_chk7_var.get(),
+        "Headache": symptom_four_chk8_var.get(),
+        "Shortness of breath": symptom_four_chk9_var.get(),
+        "Difficulty of breathing": symptom_four_chk10_var.get(),
+        "Loss of taste": symptom_four_chk11_var.get(),
+        "Loss of smell": symptom_four_chk12_var.get()
+    }
+
+    data = {
+        "First Name": first_name_prsnl_input.get(),
+        "Middle Name": middle_name_prsnl_input.get(),
+        "Last Name": last_name_prsnl_input.get(),
+        "Current Address": current_address_prsnl_input.get("1.0", "end-1c"),
+        "Permanent Address": permanent_address_prsnl_input.get("1.0", "end-1c"),
+        "Birth Date": calendar.get_date(),
+        "Contact Number / Landline": contact_prsnl_input.get(),
+        "E-mail Address": email_prsnl_input.get(),
+        "Occupation": occupy_prsnl_input.get(),
+        "Workplace Name / School Name": workplace_name_input.get(),
+        "Workplace Address / School Address": workplace_add_input.get(),
+        "Emergency Contact - Name": name_emrgncy_input.get(),
+        "Emergency Contact - Address": address_emergncy_input.get(),
+        "Emergency Contact - Contact Number / Landline": contact_emergncy_input.get(),
+        "Emergency Contact - E-mail Address": email_emergncy_input.get(),
+        "Emergency Contact - Relationship": relationship_emergncy_input.get(),
+        "Have you been vaccinated for COVID-19?": symptom_one.get(),
+        "What is your current dose/booster of vaccination shot?": symptom_two.get(),
+        "What is the brand of your vaccination for COVID-19?": covid_symptom_three_input.get(),
+        "Are you experiencing symptoms in the past 7 days?": symptom_four_values,   
+        "Have you had exposure to probable or confirm case in the last 7 days?": symptom_five.get(),
+        "Have you had contact with others with COVID-19 Symptoms in the last 7 days?": symptom_six.get(),
+        "Have you been tested for COVID-19 in the last 14 days?": symptom_seven.get(),
+        "Most recent visited area/place?": addtnl_one_input.get(),
+        "Number of people you saw in the visited area/place?": addtnl_two_input.get(),
+        "Mode of Transportation": additional_three_qstn.get(),
+        "Recent Medication Intake / Vitamin Intake?": addtnl_four_input.get()
+    }
+    covid_prompt_info(data)
+
+    # Should ask user to confirm if the inputs are correct or not (Yes or No, Continue Editing)
+    # If Yes, End Program
+    # If Not, should be able to edit given data again
+    response = messagebox.askyesno("Data Collection Complete!", "Do you want to save the data?")
+    
+    if response:
+        covid_prompt.destroy()
+
+
 covid_prompt = tk.Tk()
 covid_prompt.title("(CCT) Covid Contact Tracer - BetaTest v.0.0")
 covid_prompt.geometry("1530x1530")
+
+#Entry widget for the main window
+covid_contact_recorder = tk.Entry(covid_prompt)
+covid_contact_recorder.pack()
 
 #Pre-Form Message
 pre_form_message = Label(covid_prompt, text ="Fill out the form with outmost honesty for safety measures and the well being of others.\nMaraming Salamat Po!")
@@ -185,40 +255,52 @@ covid_symptom_three_input.place(x = 600, y = 480)
 covid_symptom_four = Label(covid_prompt, text = "Are you experiencing these symptoms in the past 7 days?")
 covid_symptom_four.place(x = 600, y = 510)
 
-symptom_four_chk1 = Checkbutton(covid_prompt, text = "Fever")
+symptom_four_chk1_var = IntVar()
+symptom_four_chk1 = Checkbutton(covid_prompt, text = "Fever", variable= symptom_four_chk1_var)
 symptom_four_chk1.place(x = 600, y = 530)
 
-symptom_four_chk2 = Checkbutton(covid_prompt, text = "Cough")
+symptom_four_chk2_var = IntVar()
+symptom_four_chk2 = Checkbutton(covid_prompt, text = "Cough", variable= symptom_four_chk2_var)
 symptom_four_chk2.place(x = 600, y = 550)
 
-symptom_four_chk3 = Checkbutton(covid_prompt, text = "Colds")
+symptom_four_chk3_var = IntVar()
+symptom_four_chk3 = Checkbutton(covid_prompt, text = "Colds", variable= symptom_four_chk3_var)
 symptom_four_chk3.place(x = 600, y = 570)
 
-symptom_four_chk4 = Checkbutton(covid_prompt, text = "Muscle/body pains")
+symptom_four_chk4_var = IntVar()
+symptom_four_chk4 = Checkbutton(covid_prompt, text = "Muscle/body pains", variable= symptom_four_chk4_var)
 symptom_four_chk4.place(x = 600, y = 590)
 
-symptom_four_chk5 = Checkbutton(covid_prompt, text = "Sore Throat")
+symptom_four_chk5_var = IntVar()
+symptom_four_chk5 = Checkbutton(covid_prompt, text = "Sore Throat", variable= symptom_four_chk5_var)
 symptom_four_chk5.place(x = 600, y = 610)
 
-symptom_four_chk6 = Checkbutton(covid_prompt, text = "Diarrhea")
+symptom_four_chk6_var = IntVar()
+symptom_four_chk6 = Checkbutton(covid_prompt, text = "Diarrhea", variable= symptom_four_chk6_var)
 symptom_four_chk6.place(x = 600, y = 630)
 
-symptom_four_chk7 = Checkbutton(covid_prompt, text = "None of the above")
+symptom_four_chk7_var = IntVar()
+symptom_four_chk7 = Checkbutton(covid_prompt, text = "None of the above", variable= symptom_four_chk7_var)
 symptom_four_chk7.place(x = 600, y = 650)
 
-symptom_four_chk8 = Checkbutton(covid_prompt, text = "Headache")
+symptom_four_chk8_var = IntVar()
+symptom_four_chk8 = Checkbutton(covid_prompt, text = "Headache", variable= symptom_four_chk8_var)
 symptom_four_chk8.place(x = 820, y = 530)
 
-symptom_four_chk9 = Checkbutton(covid_prompt, text = "Shortness of breath")
+symptom_four_chk9_var = IntVar()
+symptom_four_chk9 = Checkbutton(covid_prompt, text = "Shortness of breath", variable= symptom_four_chk9_var)
 symptom_four_chk9.place(x = 820, y = 550)
 
-symptom_four_chk10 = Checkbutton(covid_prompt, text = "Difficulty of breathing")
+symptom_four_chk10_var = IntVar()
+symptom_four_chk10 = Checkbutton(covid_prompt, text = "Difficulty of breathing", variable= symptom_four_chk10_var)
 symptom_four_chk10.place(x = 820, y = 570)
 
-symptom_four_chk11 = Checkbutton(covid_prompt, text = "Loss of taste")
+symptom_four_chk11_var = IntVar()
+symptom_four_chk11 = Checkbutton(covid_prompt, text = "Loss of taste", variable= symptom_four_chk11_var)
 symptom_four_chk11.place(x = 820, y = 590)
 
-symptom_four_chk12 = Checkbutton(covid_prompt, text = "Loss of smell")
+symptom_four_chk12_var = IntVar()
+symptom_four_chk12 = Checkbutton(covid_prompt, text = "Loss of smell", variable= symptom_four_chk12_var)
 symptom_four_chk12.place(x = 820, y = 610)
 
 # - Have you had exposure to probable or confirm case in the last 7 days?
@@ -296,13 +378,8 @@ addtnl_four_input.place(x = 1100, y = 440)
 
 
 # Submit Button:
-submission_button = Button(covid_prompt, text ="Submit", width = "10")
+submission_button = Button(covid_prompt, text ="Submit", width = "10", command = submit_records)
 submission_button.place(x = 1100, y = 500)
-
-# Should ask user to confirm if the inputs are correct or not (Yes or No, Continue Editing)
-# If Yes, End Program
-# If Not, should be able to edit given data again
-
 
 # Last Message: Picture or Slogan Quote of Covid Safety Measures
 
