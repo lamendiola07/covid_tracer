@@ -79,13 +79,53 @@ def submit_records():
     if response:
         covid_prompt.destroy()
 
+#function for searching entries
+def scan_covid_prompt_info():
+    #use for searching for keywords in the search entry
+    keywords = identify_search.get().lower()
+    print("Searching for:", keywords)
+
+    matching_entry = []
+    entry_record = {}
+    with open("covid_contact_entry.txt", "r") as entry_file:
+        entry_lines = entry_file.readlines()
+        for line in entry_lines:
+            if not line.strip():
+
+                if entry_record:
+
+                    # Check if the keyword exists in any of the values of the entry
+                    if any(keywords in val.lower() for val in entry_record.values()):
+                        matching_entry.append(entry_record.copy())
+                    entry_record = {}
+            else:
+                if ':' in line:
+                    key, value = line.strip().split(': ', 1)
+                    entry_record[key] = value
+
+    # Check the last entry if there was no blank line after it
+    if entry_record:
+        if any(keywords in val.lower() for val in entry_record.values()):
+            matching_entry.append(entry_record)
+
+    # Display the results from the search entry
+    if matching_entry:
+        entry_result = []
+        for entry in matching_entry:
+            entry_value = "\n".join([f"{key}: {value}" for key, value in entry.items()])
+            entry_result.append(entry_value)
+        results = "\n\n".join(entry_result)
+        print(results)
+
+    else:
+        print("No matching results found.")
 
 covid_prompt = tk.Tk()
 covid_prompt.title("(CCT) Covid Contact Tracer - BetaTest v.0.0")
 covid_prompt.geometry("1530x1530")
 
 #Entry widget for the main window
-covid_contact_recorder = tk.Entry(covid_prompt)
+covid_contact_entry = tk.Entry(covid_prompt)
 
 
 #Pre-Form Message
@@ -169,8 +209,6 @@ workplace_add.place(x = 220, y= 680)
 workplace_add_input = Entry(covid_prompt, width = "30")
 workplace_add_input.place (x = 220, y = 700)
 
-#Line Design to divide the main window
-
 #Emergency Contact:
 emergency_contact = Label(covid_prompt, text = "Emergency Contact")
 emergency_contact.place(x = 600, y = 10)
@@ -203,7 +241,7 @@ email_emergncy.place(x = 820, y = 90)
 
 email_emergncy_input = Entry(covid_prompt, width ="30")
 email_emergncy_input.place(x = 820, y = 110)
-7
+
 # -Relationship to the Contact Person
 relationship_emergncy = Label(covid_prompt, text = "Relationship to the Contact Person:")
 relationship_emergncy.place(x = 600, y = 150)
@@ -383,7 +421,7 @@ addtnl_four_input.place(x = 1100, y = 440)
 
 # Submit Button:
 submission_button = Button(covid_prompt, text ="Submit", width = "10", command = submit_records)
-submission_button.place(x = 1100, y = 500)
+submission_button.place(x = 1150, y = 470)
 
 # Last Message: Picture or Slogan Quote of Covid Safety Measures
 from PIL import Image, ImageTk
@@ -394,5 +432,12 @@ img = ImageTk.PhotoImage(image)
 
 img_message_input = Label(covid_prompt, image=img, width = "500", height= "400")
 img_message_input.place(x=1100, y=550)
+
+#Adding search entry to be able to look for keywords
+identify_search = Entry(covid_prompt, width="30")
+identify_search.place(x=1200, y=530)
+
+scan_btn = Button(covid_prompt, text="Search", width="10", command = scan_covid_prompt_info)
+scan_btn.place(x=1100, y=530)
 
 covid_prompt.mainloop()
