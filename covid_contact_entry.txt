@@ -1,0 +1,28 @@
+First Name: Logie
+Middle Name: Anot
+Last Name: Mendiola
+Current Address: Blk 2 Lot 5 Lilac Street Gardenia Valley subdivision Molino III BAcoor Cavite
+Permanent Address: 1192 Industria Street Pandacan Manila
+Birth Date: 5/26/02
+Contact Number / Landline: 09276215384
+E-mail Address: xter.mendiola@gmail.com
+Occupation: Student
+Workplace Name / School Name: Polytechnic University of the Philippines
+Workplace Address / School Address: Pureza
+Emergency Contact - Name: Lourdes Mendiola
+Emergency Contact - Address: Blk 2 Lot 5 Lilac Street Gardenia Valley Subdivision Molino III BAcoor Cavite
+Emergency Contact - Contact Number / Landline: 09276215753
+Emergency Contact - E-mail Address: N/A
+Emergency Contact - Relationship: Mother
+Have you been vaccinated for COVID-19?: 1
+What is your current dose/booster of vaccination shot?: 4
+What is the brand of your vaccination for COVID-19?: Sinovac
+Are you experiencing symptoms in the past 7 days?: {'Fever': 0, 'Cough': 0, 'Colds': 0, 'Muscle/body pains': 0, 'Sore Throat': 0, 'Diarrhea': 0, 'None of the above': 1, 'Headache': 0, 'Shortness of breath': 0, 'Difficulty of breathing': 0, 'Loss of taste': 0, 'Loss of smell': 0}
+Have you had exposure to probable or confirm case in the last 7 days?: 2
+Have you had contact with others with COVID-19 Symptoms in the last 7 days?: 2
+Have you been tested for COVID-19 in the last 14 days?: 3
+Most recent visited area/place?: PUP - College of Engineering
+Number of people you saw in the visited area/place?: 100
+Mode of Transportation: 1
+Recent Medication Intake / Vitamin Intake?: Enervon
+{'First Name': 'Logie', 'Middle Name': 'Anot', 'Last Name': 'Mendiola', 'Current Address': 'Blk 2 Lot 5 Lilac Street Gardenia Valley subdivision Molino III BAcoor Cavite', 'Permanent Address': '1192 Industria Street Pandacan Manila', 'Birth Date': '5/26/02', 'Contact Number / Landline': '09276215384', 'E-mail Address': 'xter.mendiola@gmail.com', 'Occupation': 'Student', 'Workplace Name / School Name': 'Polytechnic University of the Philippines', 'Workplace Address / School Address': 'Pureza', 'Emergency Contact - Name': 'Lourdes Mendiola', 'Emergency Contact - Address': 'Blk 2 Lot 5 Lilac Street Gardenia Valley Subdivision Molino III BAcoor Cavite', 'Emergency Contact - Contact Number / Landline': '09276215753', 'Emergency Contact - E-mail Address': 'N/A', 'Emergency Contact - Relationship': 'Mother', 'Have you been vaccinated for COVID-19?': 1, 'What is your current dose/booster of vaccination shot?': 4, 'What is the brand of your vaccination for COVID-19?': 'Sinovac', 'Are you experiencing symptoms in the past 7 days?': {'Fever': 0, 'Cough': 0, 'Colds': 0, 'Muscle/body pains': 0, 'Sore Throat': 0, 'Diarrhea': 0, 'None of the above': 1, 'Headache': 0, 'Shortness of breath': 0, 'Difficulty of breathing': 0, 'Loss of taste': 0, 'Loss of smell': 0}, 'Have you had exposure to probable or confirm case in the last 7 days?': 2, 'Have you had contact with others with COVID-19 Symptoms in the last 7 days?': 2, 'Have you been tested for COVID-19 in the last 14 days?': 3, 'Most recent visited area/place?': 'PUP - College of Engineering', 'Number of people you saw in the visited area/place?': '100', 'Mode of Transportation': 1, 'Recent Medication Intake / Vitamin Intake?': 'Enervon'}

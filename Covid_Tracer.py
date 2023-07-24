@@ -91,7 +91,7 @@ def scan_covid_prompt_info():
         entry_lines = entry_file.readlines()
         for line in entry_lines:
             if not line.strip():
-
+                
                 if entry_record:
 
                     # Check if the keyword exists in any of the values of the entry
